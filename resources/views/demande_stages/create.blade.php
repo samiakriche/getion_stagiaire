@@ -2,11 +2,21 @@
 @section('title', __('demande_stage.create'))
 
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">{{ __('demande_stage.create') }}</div>
-            <form method="POST" action="{{ route('demande_stages.store') }}" accept-charset="UTF-8" enctype="multipart/form-data" >
+
+
+        <div class="content-wrapper">
+          <div class="row">
+            
+       
+    
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ __('demande_stage.create') }}</h4>
+                    <p class="card-description">
+                    
+                    </p>
+                    <form method="POST" action="{{ route('demande_stages.store') }}" accept-charset="UTF-8" enctype="multipart/form-data" >
                 {{ csrf_field() }}
                 <div class="card-body">
                     <div class="form-group">
@@ -26,12 +36,21 @@
                         @enderror
                   </div>
                 </div>
-                <div class="card-footer">
-                    <input type="submit" value="{{ __('demande_stage.create') }}" class="btn btn-success">
-                    <a href="{{ route('user_index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
+                <div class="col-md-12 offset-1">
+                    <input type="submit" value="{{ __('demande_stage.create') }}" class="btn btn-primary ">
+                    <a href="{{ route('user_index') }}" class="btn btn-danger">{{ __('app.cancel') }}</a>
                 </div>
             </form>
-        </div>
-    </div>
-</div>
+                  </div>
+                </div>
+              </div>
+              
+           
+           
+           
+          </div>
+    
+       
+
+
 @endsection

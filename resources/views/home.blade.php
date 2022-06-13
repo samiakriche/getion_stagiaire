@@ -1,9 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.app0')
 
 @section('content')
+
+<div class="content-wrapper">
+          <div class="row">
+            
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -18,6 +22,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
     </div>
 </div>
 @endsection

@@ -29,18 +29,17 @@
 
 <div class="row">
     <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
+
                 <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
                     <div class="form-group">
                         <label for="q" class="form-label">{{ __('demande_stage.search') }}</label>
                         <input placeholder="{{ __('demande_stage.search_text') }}" name="q" type="text" id="q" class="form-control mx-sm-2" value="Titre">
                     </div>
-                    <input type="submit" value="{{ __('demande_stage.search') }}" class="btn btn-secondary">
-                    <a href="{{ route('demande_stages.index') }}" class="btn btn-link">{{ __('app.reset') }}</a>
+                    <input type="submit" value="{{ __('demande_stage.search') }}" class="btn btn-primary ">
+                    <a href="{{ route('demande_stages.index') }}" class="btn btn-light">{{ __('app.reset') }}</a>
                 </form>
             </div>
-            <table class="table table-sm table-responsive-sm table-hover">
+            <table class="table  table-responsive  mt-1">
                 <thead>
                     <tr>
                         <th class="text-center">{{ __('app.table_no') }}</th>
@@ -81,11 +80,11 @@
                     
                    
                     <div class="form-group">
-                    <input type="submit" name="status" label="accepter" value="accepter" >
+                    <input type="submit" name="status" label="accepter" class="btn btn-success btn-md" value="accepter" >
                         
                     </div>   
                     <div class="form-group">
-                    <input type="submit" name="status"  value="refuser" >
+                    <input type="submit" name="status" class="btn btn-danger btn-md"  value="refuser" >
                     </div>  
                     </form>
                   
@@ -93,8 +92,8 @@
                     <form  id="{{ $demandeStage->id }}" style="display: flex;gap: 12px; justify-content: center;" method="POST" action="{{ route('demande_stages.encadrant',$demandeStage->id) }}" accept-charset="UTF-8">
                     {{ csrf_field() }} {{ method_field('post') }}
                     <div class="form-group">
-                    <input id="{{ $demandeStage->id }}" type="text"  name="encadrant_id" value=""   > 
-                    <input id="{{ $demandeStage->id }}" type="submit"   value="Affecter" >
+                    <input id="{{ $demandeStage->id }}" type="text" class="form-control"  name="encadrant_id" value=""   > 
+                    <input id="{{ $demandeStage->id }}" type="submit" class="btn btn-info btn-md" value="Affecter" >
                     </div> 
                     </form>
                     @endif 
@@ -114,7 +113,7 @@
               
           
             <div >{{ $demandeStages->appends(Request::except('page'))->render() }}</div>
-           <p>{{ __('app.total') }} : {{ $demandeStages->total() }} {{ __('demande_stage.demande_stage') }}</p> 
+<div class="row"><p>{{ __('app.total') }} : {{ $demandeStages->total() }} {{ __('demande_stage.demande_stage') }}</p></div>  
   </div>
               </div>
             </div>
