@@ -41,6 +41,7 @@ Route::get('user',function () {
 
 Route::post('demande_stages_status/{id}', [App\Http\Controllers\DemandeStageController::class, 'status'])->name('demande_stages.status');
 Route::post('demande_stages_encadrant/{id}', [App\Http\Controllers\DemandeStageController::class, 'encadrant'])->name('demande_stages.encadrant');
+Route::get('document_download/{id}', [App\Http\Controllers\DocumentController::class, 'download'])->name('documents.download');
 
 
 

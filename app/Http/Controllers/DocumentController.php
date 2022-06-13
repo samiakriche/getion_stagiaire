@@ -71,6 +71,16 @@ class DocumentController extends Controller
     
     }
 
+
+    public function download( $id)
+{
+
+    $document = Document::where('id', $id)->firstOrFail();
+    $pathToFile = storage_path('app/public/files/' . $document->nom);
+    //dd($pathToFile);
+    return response()->download($pathToFile);
+
+}
     /**
      * Display the specified document.
      *

@@ -40,10 +40,13 @@
                         <td class="text-center">{{ $documents->firstItem() + $key }}</td>
                         <td>{!! $document->name_link !!}</td>
                         <td>{{ $document->description }}</td>
-                        <td class="text-center">
+                        <td class="text-center"  style="display: flex;gap: 12px; justify-content: center;">
                             @can('view', $document)
                                 <a href="{{ route('documents.show', $document) }}" id="show-document-{{ $document->id }}">{{ __('app.show') }}</a>
                             @endcan
+                            
+                            <a href="{{ route('documents.download', $document->id) }}" id="id">{{ __('Download') }}</a>
+                            
                         </td>
                     </tr>
                     @endforeach
