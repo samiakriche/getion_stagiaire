@@ -1,21 +1,27 @@
+
 @extends('layouts.app')
-
 @section('title', __('encadrant.list'))
-
 @section('content')
-<div class="mb-3">
+
+      <!-- partial -->
+    
+          <div class="row">
+            
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+           
+                <div class="card-body">
+                <div class="mb-3">
     <div class="float-right">
         @can('create', new App\Models\Encadrant)
             <a href="{{ route('encadrants.create') }}" class="btn btn-success">{{ __('encadrant.create') }}</a>
         @endcan
     </div>
-    <h1 class="page-title">{{ __('encadrant.list') }} <small>{{ __('app.total') }} : {{ $encadrants->total() }} {{ __('encadrant.encadrant') }}</small></h1>
+    <h4 class="card-title">{{ __('encadrant.list') }} </h4>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
+                
+                  <div class="card-header">
                 <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
                     <div class="form-group">
                         <label for="q" class="form-label">{{ __('encadrant.search') }}</label>
@@ -55,8 +61,12 @@
                     @endforeach
                 </tbody>
             </table>
-            <div class="card-body">{{ $encadrants->appends(Request::except('page'))->render() }}</div>
+            <p><small>{{ __('app.total') }} : {{ $encadrants->total() }} {{ __('encadrant.encadrant') }}</small>
+            </p>  </div>
+              </div>
+            </div>
+           
+           
+          </div>
         </div>
-    </div>
-</div>
 @endsection
