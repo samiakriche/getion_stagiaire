@@ -3,7 +3,15 @@
 @section('title', __('demande_stage.list'))
 
 @section('content')
-<div class="mb-3">
+    
+<div class="row">
+            
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+           
+                <div class="card-body">
+                <div class="mb-3">
+    <div class="float-right">
   
      @if (Auth::user()->role === 'user')
                                     
@@ -15,7 +23,8 @@
         @endcan
     </div>
     @endif
-    <h1 class="page-title">{{ __('demande_stage.list') }} <small>{{ __('app.total') }} : {{ $demandeStages->total() }} {{ __('demande_stage.demande_stage') }}</small></h1>
+    <div><h3 class="page-title">{{ __('demande_stage.list') }} </h3></div>
+    
 </div>
 
 <div class="row">
@@ -101,9 +110,15 @@
                     </tr>
                     @endforeach
                 </tbody>
-            </table>
-            <div class="card-body">{{ $demandeStages->appends(Request::except('page'))->render() }}</div>
-        </div>
-    </div>
-</div>
-@endsection
+                </table>
+              
+          
+            <div >{{ $demandeStages->appends(Request::except('page'))->render() }}</div>
+           <p>{{ __('app.total') }} : {{ $demandeStages->total() }} {{ __('demande_stage.demande_stage') }}</p> 
+  </div>
+              </div>
+            </div>
+           
+           
+          </div>
+        </div>@endsection

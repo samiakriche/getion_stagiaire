@@ -25,7 +25,7 @@ class CreateDemandeStagesTable extends Migration
             $table->timestamps();
 
             $table->foreign('creator_id')->references('id')->on('users')->onDelete('restrict');
-            $table->foreign('encadrant_id')->references('id')->on('encadrants')->onDelete('restrict');
+          //  $table->foreign('encadrant_id')->references('id')->on('encadrants')->onDelete('restrict');
 
         });
     }
