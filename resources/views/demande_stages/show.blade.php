@@ -2,11 +2,21 @@
 
 @section('title', __('demande_stage.detail'))
 
-@section('content')
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">{{ __('demande_stage.detail') }}</div>
+@section('content')       
+<div class="content-wrapper">
+          <div class="row">
+            
+       
+    
+    
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ __('demande_stage.detail') }}</h4>
+                    <p class="card-description">
+                    
+                    </p>
+    
             <div class="card-body">
                 <table class="table table-sm">
                     <tbody>
@@ -15,13 +25,15 @@
                     </tbody>
                 </table>
             </div>
-            <div class="card-footer">
+            <div class="row">
                 @can('update', $demandeStage)
                     <a href="{{ route('demande_stages.edit', $demandeStage) }}" id="edit-demande_stage-{{ $demandeStage->id }}" class="btn btn-warning">{{ __('demande_stage.edit') }}</a>
                 @endcan
-                <a href="{{ route('demande_stages.index') }}" class="btn btn-link">{{ __('demande_stage.back_to_index') }}</a>
+                <a href="{{ route('demande_stages.index') }}" class="btn btn-info">{{ __('demande_stage.back_to_index') }}</a>
             </div>
         </div>
     </div>
 </div>
+</div>
+
 @endsection
