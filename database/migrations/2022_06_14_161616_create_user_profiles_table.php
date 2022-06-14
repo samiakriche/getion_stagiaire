@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDemandeStagesTable extends Migration
+class CreateUserProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,24 +13,14 @@ class CreateDemandeStagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('demande_stages', function (Blueprint $table) {
+        Schema::create('user_profiles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 60);
-            $table->string('name_file', 60);
-            $table->string('path_file', 60);
-            $table->string('status', 60);
             $table->string('description')->nullable();
             $table->unsignedBigInteger('creator_id');
-            $table->unsignedBigInteger('encadrant_id');
             $table->timestamps();
 
             $table->foreign('creator_id')->references('id')->on('users')->onDelete('restrict');
-<<<<<<< HEAD
-           // $table->foreign('encadrant_id')->references('id')->on('encadrants')->onDelete('restrict');
-=======
-          //  $table->foreign('encadrant_id')->references('id')->on('encadrants')->onDelete('restrict');
->>>>>>> 5183dadd81a056ceaca7d379efa70235469ef14e
-
         });
     }
 
@@ -41,6 +31,6 @@ class CreateDemandeStagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demande_stages');
+        Schema::dropIfExists('user_profiles');
     }
 }

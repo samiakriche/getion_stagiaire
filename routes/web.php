@@ -42,6 +42,8 @@ Route::get('user',function () {
 Route::post('demande_stages_status/{id}', [App\Http\Controllers\DemandeStageController::class, 'status'])->name('demande_stages.status');
 Route::post('demande_stages_encadrant/{id}', [App\Http\Controllers\DemandeStageController::class, 'encadrant'])->name('demande_stages.encadrant');
 Route::get('document_download/{id}', [App\Http\Controllers\DocumentController::class, 'download'])->name('documents.download');
+Route::get('user_profile/show', [App\Http\Controllers\UserProfileController::class, 'show'])->name('user_profile.show');
+Route::get('user_profile/edit/{id}', [App\Http\Controllers\UserProfileController::class, 'edit'])->name('user_profile.edit');
 
 
 
@@ -85,3 +87,8 @@ Route::view('admin', 'home');
  * Documents Routes
  */
 Route::resource('documents', App\Http\Controllers\DocumentController::class);
+
+/*
+ * UserProfiles Routes
+ */
+Route::resource('user_profiles', App\Http\Controllers\UserProfileController::class);

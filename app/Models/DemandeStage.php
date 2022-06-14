@@ -10,8 +10,12 @@ class DemandeStage extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'creator_id','name_file','path_file','status','encadrant_id'];
+    protected $fillable = ['name', 'description', 'creator_id','name_file','path_file','status','encadrant_id','societe', 'date_debut', 'date_fin'];
 
+    protected $casts = [
+        'date_debut' => 'datetime:d/m/Y', // Change your format
+        'date_fin' => 'datetime:d/m/Y',
+    ];
     public function getNameLinkAttribute()
     {
         $title = __('app.show_detail_title', [

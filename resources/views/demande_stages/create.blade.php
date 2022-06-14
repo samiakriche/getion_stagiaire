@@ -25,6 +25,21 @@
                         {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <div class="form-group">
+                        <label for="name" class="form-label">{{ __('Societe') }} <span class="form-required">*</span></label>
+                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="societe" value="{{ old('name') }}" required>
+                        {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">{{ __('Date debut') }} <span class="form-required">*</span></label>
+                        <input id="name" type="date" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="date_debut" value="" required>
+                        {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">{{ __('Date fin') }} <span class="form-required">*</span></label>
+                        <input id="name" type="date" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="date_fin" value="" required>
+                        {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
+                    <div class="form-group">
                         <label for="description" class="form-label">{{ __('Lettre de motivation') }}</label>
                         <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" rows="4">{{ old('description') }}</textarea>
                         {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}

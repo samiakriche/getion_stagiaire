@@ -69,8 +69,13 @@ class DemandeStageController extends Controller
             'name'        => 'required|max:60',
             'description' => 'nullable|max:255',
             'file'  => 'required',
+            "societe" => 'required',
+            "date_debut" => 'required',
+            "date_fin" => 'required',
+            "description" => 'required',
         
         ]);
+
 
         $name_file = $request->file('file')->getClientOriginalName();
         $path_file = $request->file->store('public/files');
@@ -86,6 +91,7 @@ class DemandeStageController extends Controller
  
        // 
         //dd($path_file);
+      //  dd($newDemandeStage);
 
         $demandeStage = DemandeStage::create($newDemandeStage);
 

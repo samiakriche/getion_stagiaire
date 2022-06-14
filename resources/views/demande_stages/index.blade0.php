@@ -35,7 +35,7 @@
                 <thead>
                     <tr>
                         <th class="text-center">{{ __('app.table_no') }}</th>
-                        <th>{{ __('Titre') }}</th>
+                        <th>{{ __('Titre0') }}</th>
                         <th>{{ __('Description') }}</th>
                         <th>{{ __('Status') }}</th>
                         <th>{{ __('Encadrant ID ') }}</th>
