@@ -92,3 +92,8 @@ Route::resource('documents', App\Http\Controllers\DocumentController::class);
  * UserProfiles Routes
  */
 Route::resource('user_profiles', App\Http\Controllers\UserProfileController::class);
+
+/*
+ * Etudiants Routes
+ */
+Route::resource('etudiants', App\Http\Controllers\EtudiantController::class);
