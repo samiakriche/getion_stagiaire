@@ -10,7 +10,7 @@ class Etudiant extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nom', 'prenom', 'email','creator_id'];
+    protected $fillable = ['nom', 'prenom', 'email'];
 
     public function getNameLinkAttribute()
     {

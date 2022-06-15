@@ -20,10 +20,10 @@ class CreateEtudiantsTable extends Migration
 
             $table->string('email', 60);
 
-            $table->unsignedBigInteger('creator_id');
+           // $table->unsignedBigInteger('creator_id');
             $table->timestamps();
 
-            $table->foreign('creator_id')->references('id')->on('users')->onDelete('restrict');
+          //  $table->foreign('creator_id')->references('id')->on('users')->onDelete('restrict');
         });
     }
 

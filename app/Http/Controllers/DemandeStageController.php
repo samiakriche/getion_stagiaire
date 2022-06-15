@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\DemandeStage;
+use App\Models\Etudiant;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -157,7 +159,16 @@ class DemandeStageController extends Controller
 
         if ( $status == 'accepter') {
             $ds->status = 'Accepted';
-    
+            $idUser = $ds->creator_id;
+            $user=User::find($idUser);
+
+           // $newEtudiant['creator_id'] = auth()->id();
+            $newEtudiant['nom'] = $user->nom;
+            $newEtudiant['prenom'] = $user->prenom;
+            $newEtudiant['email'] = $user->email;
+          //  dd($newEtudiant);
+            $etudiant = Etudiant::create($newEtudiant);
+            
         } else {
             $ds->status = 'Refused';
         }
@@ -175,8 +186,10 @@ class DemandeStageController extends Controller
          $encadrant_id = $request->input('encadrant_id');
        // dd($request->all());
         $ds = DemandeStage::find($id);
+       // dd($ds);
         $ds->encadrant_id= $encadrant_id;
         $ds->save();
+
         return redirect()->route('demande_stages.index');
 
 
