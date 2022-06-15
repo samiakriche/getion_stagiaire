@@ -11,7 +11,7 @@
               <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">{{ __('encadrant.create') }}</h4>
+                    <h4 class="card-title">Créer un nouvel encadrant</h4>
                     <p class="card-description">
                     
                     </p>
@@ -48,8 +48,8 @@
                     </div>
                 </div>
                 <div class="col-md-12 offset-md-1">
-                    <input type="submit" value="{{ __('encadrant.create') }}" class="btn btn-success">
-                    <a href="{{ route('encadrants.index') }}" class="btn btn-danger">{{ __('app.cancel') }}</a>
+                    <input type="submit" value="Créer" class="btn btn-success">
+                    <a href="{{ route('encadrants.index') }}" class="btn btn-danger">Annuler</a>
                 </div>
             </form>
         </div>

@@ -5,7 +5,7 @@
 
       <!-- partial -->
     
-          <div class="row">
+      <div class="row">
             
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
@@ -13,22 +13,23 @@
                 <div class="card-body">
                 <div class="mb-3">
     <div class="float-right">
+  
         @can('create', new App\Models\Encadrant)
-            <a href="{{ route('encadrants.create') }}" class="btn btn-success">{{ __('encadrant.create') }}</a>
+            <a href="{{ route('encadrants.create') }}" class="btn btn-success">Créer un encadrant</a>
         @endcan
     </div>
-    <h4 class="card-title">{{ __('encadrant.list') }} </h4>
+    <h4 class="card-title">Liste des encadrants</h4>
 </div>
 
                 
                   <div class="card-header">
                 <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
                     <div class="form-group">
-                        <label for="q" class="form-label">{{ __('encadrant.search') }}</label>
-                        <input placeholder="{{ __('encadrant.search_text') }}" name="q" type="text" id="q" class="form-control mx-sm-2" value="{{ request('q') }}">
+                        <label for="q" class="form-label">Rechercher un encadrant </label>
+                        <input placeholder="Rechercher" name="q" type="text" id="q" class="form-control mx-sm-2" value="{{ request('q') }}">
                     </div>
-                    <input type="submit" value="{{ __('encadrant.search') }}" class="btn btn-secondary">
-                    <a href="{{ route('encadrants.index') }}" class="btn btn-link">{{ __('app.reset') }}</a>
+                    <input type="submit" value="Rechercher" class="btn btn-priamary">
+                    <a href="{{ route('encadrants.index') }}" class="btn btn-light">Annuler</a>
                 </form>
             </div>
             <table class="table table-sm table-responsive-sm table-hover">

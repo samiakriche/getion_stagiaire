@@ -23,7 +23,7 @@
         @endcan
     </div>
     @endif
-    <div><h3 class="page-title">{{ __('demande_stage.list') }} </h3></div>
+    <div><h3 class="page-title">Liste des demandes des stages</h3></div>
     
 </div>
 
@@ -32,11 +32,11 @@
 
                 <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
                     <div class="form-group">
-                        <label for="q" class="form-label">{{ __('demande_stage.search') }}</label>
+                        <label for="q" class="form-label">Rechercher des demandes</label>
                         <input placeholder="{{ __('demande_stage.search_text') }}" name="q" type="text" id="q" class="form-control mx-sm-2" value="Titre">
                     </div>
-                    <input type="submit" value="{{ __('demande_stage.search') }}" class="btn btn-primary ">
-                    <a href="{{ route('demande_stages.index') }}" class="btn btn-light">{{ __('app.reset') }}</a>
+                    <input type="submit" value="Rechercher" class="btn btn-primary ">
+                    <a href="{{ route('demande_stages.index') }}" class="btn btn-light">Annuler</a>
                 </form>
             </div>
             <table class="table  table-responsive  mt-1">

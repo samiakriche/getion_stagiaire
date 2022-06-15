@@ -25,7 +25,7 @@
             <div class="container">
                 
                 <a class="navbar-brand" href="{{ url('/admin/dashboard') }}">
-                   Dashboard
+                Accueil
                 </a>
                 <a class="navbar-brand" href="{{ url('/demande_stages') }}">
                    Liste des demandes de stages

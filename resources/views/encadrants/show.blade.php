@@ -3,10 +3,16 @@
 @section('title', __('encadrant.detail'))
 
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">{{ __('encadrant.detail') }}</div>
+<div class="content-wrapper">
+          <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Encadrant Details</h4>
+                    <p class="card-description">
+                    
+                    </p>
+    
             <div class="card-body">
                 <table class="table table-sm">
                     <tbody>
@@ -18,11 +24,11 @@
                     </tbody>
                 </table>
             </div>
-            <div class="card-footer">
+            <div class="col-md-12 offset-1">
                 @can('update', $encadrant)
-                    <a href="{{ route('encadrants.edit', $encadrant) }}" id="edit-encadrant-{{ $encadrant->id }}" class="btn btn-warning">{{ __('encadrant.edit') }}</a>
+                    <a href="{{ route('encadrants.edit', $encadrant) }}" id="edit-encadrant-{{ $encadrant->id }}" class="btn btn-info">Modifier</a>
                 @endcan
-                <a href="{{ route('encadrants.index') }}" class="btn btn-link">{{ __('encadrant.back_to_index') }}</a>
+                <a href="{{ route('encadrants.index') }}" class="btn btn-light">Voir la liste</a>
             </div>
         </div>
     </div>
