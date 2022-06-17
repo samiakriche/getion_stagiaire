@@ -41,9 +41,9 @@
                                     <th class="text-center">{{ __('app.table_no') }}</th>
                                     <th>{{ __('Titre') }}</th>
                                     <!--th>{{ __('Description') }}</th-->
-                                    <th>{{ __('Date de debut') }}</th>
+                                    <!--th>{{ __('Date de debut') }}</th>
                                     <th>{{ __('Date de fin') }}</th>
-                                    <th>{{ __('Societe') }}</th>
+                                    <th>{{ __('Societe') }}</th-->
                                     <th>{{ __('Status') }}</th>
                                     <th>{{ __('Encadrant ID ') }}</th>
                                     @if (Auth::user()->role === 'admin')
@@ -57,9 +57,9 @@
                                     <td class="text-center">{{ $demandeStages->firstItem() + $key }}</td>
                                     <td>{!! $demandeStage->name_link !!}</td>
                                     <!--td>{{ $demandeStage->description }}</td-->
-                                    <td>{{ $demandeStage->date_debut }}</td>
+                                    <!--td>{{ $demandeStage->date_debut }}</td>
                                     <td>{{ $demandeStage->date_fin }}</td>
-                                    <td>{{ $demandeStage->societe }}</td>
+                                    <td>{{ $demandeStage->societe }}</td-->
                                     <td>{{ $demandeStage->status }}</td>
                                     <td>{{ $demandeStage->encadrant_id }}</td>
 
