@@ -26,7 +26,7 @@ class CreateDemandeStagesTable extends Migration
             $table->string('status', 60);
             $table->string('description')->nullable();
             $table->unsignedBigInteger('creator_id');
-            $table->unsignedBigInteger('encadrant_id');
+            $table->string('encadrant_id')->nullable();
             $table->timestamps();
 
             $table->foreign('creator_id')->references('id')->on('users')->onDelete('restrict');
