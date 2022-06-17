@@ -3,23 +3,29 @@
 @section('title', __('etudiant.detail'))
 
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">{{ __('etudiant.detail') }}</div>
+<div class="content-wrapper">
+          <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Etudiant Details</h4>
+                    <p class="card-description"> </p>
+    
             <div class="card-body">
                 <table class="table table-sm">
                     <tbody>
-                        <tr><td>{{ __('etudiant.name') }}</td><td>{{ $etudiant->name }}</td></tr>
-                        <tr><td>{{ __('etudiant.description') }}</td><td>{{ $etudiant->description }}</td></tr>
+                        <tr><td>Name</td><td>{{ $etudiant->nom }}</td></tr>
+                        <tr><td>Prenom</td><td>{{ $etudiant->prenom }}</td></tr>
+                        <tr><td>Email</td><td>{{ $etudiant->email }}</td></tr>
+                    
                     </tbody>
                 </table>
             </div>
-            <div class="card-footer">
+            <div class="col-md-12 offset-1">
                 @can('update', $etudiant)
-                    <a href="{{ route('etudiants.edit', $etudiant) }}" id="edit-etudiant-{{ $etudiant->id }}" class="btn btn-warning">{{ __('etudiant.edit') }}</a>
+                    <a href="{{ route('etudiants.edit', $etudiant) }}" id="edit-etudiant-{{ $etudiant->id }}" class="btn btn-info">Modifier</a>
                 @endcan
-                <a href="{{ route('etudiants.index') }}" class="btn btn-link">{{ __('etudiant.back_to_index') }}</a>
+                <a href="{{ route('etudiants.index') }}" class="btn btn-light">Cancel</a>
             </div>
         </div>
     </div>

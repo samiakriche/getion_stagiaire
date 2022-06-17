@@ -9,9 +9,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Encadrant Details</h4>
-                    <p class="card-description">
-                    
-                    </p>
+                    <p class="card-description"> </p>
     
             <div class="card-body">
                 <table class="table table-sm">
