@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DemandeStage;
 use App\Models\Etudiant;
 use App\Models\User;
+use App\Models\Encadrant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,8 +31,15 @@ class DemandeStageController extends Controller
     
         }
         $demandeStages = $demandeStageQuery->paginate(25);
+        $encadrants=Encadrant::all();
+        $i=0;
+        foreach ($encadrants as $encadrant){
+        $nom_encadrants[$i]= $encadrant->prenom . ' '. $encadrant->nom ;
+        $i++;
+           }
 
-        return view('demande_stages.index', compact('demandeStages'));
+         //  dd($nom_encadrants);
+        return view('demande_stages.index', compact('demandeStages','nom_encadrants'));
     }
 
     /**

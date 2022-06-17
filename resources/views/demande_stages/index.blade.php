@@ -16,7 +16,8 @@
      @if (Auth::user()->role === 'user')
                                     
                                   
-                                  
+     
+                       
     <div class="float-right">
         @can('create', new App\Models\DemandeStage)
             <a href="{{ route('demande_stages.create') }}" class="btn btn-success">{{ __('demande_stage.create') }}</a>
@@ -32,6 +33,8 @@
 
                 <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
                     <div class="form-group">
+                    
+                  
                         <label for="q" class="form-label">Rechercher des demandes</label>
                         <input placeholder="{{ __('demande_stage.search_text') }}" name="q" type="text" id="q" class="form-control mx-sm-2" value="Titre">
                     </div>
@@ -72,6 +75,7 @@
                         
                        
                         <td>{{ $demandeStage->encadrant_id }}</td>
+
                         
                         
                       <!--  <td class="text-center">
@@ -99,8 +103,9 @@
                     @elseif( $demandeStage->status === 'Accepted'  )
                     <form  id="{{ $demandeStage->id }}" style="display: flex;gap: 12px; justify-content: center;" method="POST" action="{{ route('demande_stages.encadrant',$demandeStage->id) }}" accept-charset="UTF-8">
                     {{ csrf_field() }} {{ method_field('post') }}
-                    <div class="form-group">
-                    <input id="{{ $demandeStage->id }}" type="text" class="form-control"  name="encadrant_id" value=""   > 
+                    <div class="form-group"
+                   
+                    {{ Form::select('encadrants', $nom_encadrants , null); }}
                     <input id="{{ $demandeStage->id }}" type="submit" class="btn btn-info btn-md" value="Affecter" >
                     </div> 
                     </form>
