@@ -32,10 +32,11 @@ class DemandeStageController extends Controller
         }
         $demandeStages = $demandeStageQuery->paginate(25);
         $encadrants=Encadrant::all();
-        $i=0;
+        
         foreach ($encadrants as $encadrant){
-        $nom_encadrants[$i]= $encadrant->prenom . ' '. $encadrant->nom ;
-        $i++;
+            $n=$encadrant->prenom . ' '. $encadrant->nom ;
+            $nom_encadrants[$n]= $n;
+       
            }
 
          //  dd($nom_encadrants);
@@ -95,6 +96,8 @@ class DemandeStageController extends Controller
         $newDemandeStage['path_file'] = $path_file;
         $newDemandeStage['status'] = "Pending";
         $newDemandeStage['encadrant_id'] = 0;
+        $newDemandeStage['encadrant_nom'] = 'vide';
+
 
 
         
@@ -191,11 +194,11 @@ class DemandeStageController extends Controller
   
     public function encadrant(Request $request, $id)
     {  
-         $encadrant_id = $request->input('encadrant_id');
-       // dd($request->all());
+         $encadrant_nom = $request->input('encadrant_nom');
+     //  dd( $encadrant_nom);
         $ds = DemandeStage::find($id);
        // dd($ds);
-        $ds->encadrant_id= $encadrant_id;
+        $ds->encadrant_nom= $encadrant_nom;
         $ds->save();
 
         return redirect()->route('demande_stages.index');

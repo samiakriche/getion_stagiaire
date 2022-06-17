@@ -10,7 +10,7 @@ class DemandeStage extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'creator_id','name_file','path_file','status','encadrant_id','societe', 'date_debut', 'date_fin'];
+    protected $fillable = ['name', 'description', 'creator_id','name_file','path_file','status','encadrant_id','societe', 'date_debut', 'date_fin','encadrant_nom'];
 
     protected $casts = [
         'date_debut' => 'datetime:d/m/Y', // Change your format
