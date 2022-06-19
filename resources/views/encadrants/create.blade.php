@@ -46,6 +46,11 @@
                         {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
 
                     </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">{{ __('Password') }} <span class="form-required">*</span></label>
+                        <input id="name" type="text"  class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="password" value="{{ old('name') }}" required>
+                        {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
                 </div>
                 <div class="col-md-12 offset-md-1">
                     <input type="submit" value="Créer" class="btn btn-success">

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Encadrant;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class EncadrantController extends Controller
 {
@@ -52,8 +54,19 @@ class EncadrantController extends Controller
         
         ]);
         $newEncadrant['creator_id'] = auth()->id();
+       
+        $user=$newEncadrant;
+        $user['role']='encadrant';
+        $user['nom']= $request->input('nom');
+        $user['prenom']= $request->input('prenom');
+        $user['email']= $request->input('email');
+        $ps=$request->input('password');
+        $user['password']= Hash::make($ps);
+      
+
 
         $encadrant = Encadrant::create($newEncadrant);
+        User::create($user);
 
         return redirect()->route('encadrants.show', $encadrant);
     }

@@ -97,3 +97,8 @@ Route::resource('user_profiles', App\Http\Controllers\UserProfileController::cla
  * Etudiants Routes
  */
 Route::resource('etudiants', App\Http\Controllers\EtudiantController::class);
+
+/*
+ * Suivies Routes
+ */
+Route::resource('suivies', App\Http\Controllers\SuivieController::class);

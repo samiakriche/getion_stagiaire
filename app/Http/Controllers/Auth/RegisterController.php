@@ -81,7 +81,7 @@ class RegisterController extends Controller
     public function show()
     {
         $user = Auth::user();
-        dd($user);
+       // dd($user);
         return view('users.show', compact('user'));
     }
 
@@ -91,34 +91,5 @@ class RegisterController extends Controller
      * @param  \App\Models\Encadrant  $encadrant
      * @return \Illuminate\View\View
      */
-    public function edit(Encadrant $encadrant)
-    {
-        $this->authorize('update', $encadrant);
-
-        return view('encadrants.edit', compact('encadrant'));
-    }
-
-    /**
-     * Update the specified encadrant in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Encadrant  $encadrant
-     * @return \Illuminate\Routing\Redirector
-     */
-    public function update(Request $request, Encadrant $encadrant)
-    {
-        $this->authorize('update', $encadrant);
-
-        $encadrantData = $request->validate([
-            'nom'        => 'required|max:60',
-            'prenom' => 'required|max:60',
-            'tel'        => 'required|max:2',
-            'email'        => 'required|max:60',
-            'status'        => 'required|max:60',
-        
-        ]);
-        $encadrant->update($encadrantData);
-
-        return redirect()->route('encadrants.show', $encadrant);
-    }
+   
 }
