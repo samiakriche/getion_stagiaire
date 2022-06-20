@@ -6,6 +6,7 @@ use App\Models\UserProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use PDF;
 
 class UserProfileController extends Controller
 {
@@ -123,5 +124,13 @@ class UserProfileController extends Controller
         }
 
         return back();
+    }
+    public function generatePDF (UserProfile $userProfile) {
+        // Retrieve all products from the db
+      
+    
+        $pdf = PDF ::loadView ('user_profiles.mypdf', compact('userProfile'));
+       return $pdf->download ('mypdf.pdf');
+        
     }
 }
