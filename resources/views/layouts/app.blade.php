@@ -150,7 +150,7 @@
             </a>
           </li>
          
-          @if (Auth::user()->role === 'admin')
+                     @if (Auth::user()->role === 'admin')
                                     
                                     <li class="nav-item"> <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                                    
@@ -185,6 +185,7 @@
               </ul>
             </div>
           </li>
+          @if (Auth::user()->role === 'admin' OR Auth::user()->role === 'user')
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="menu-icon mdi mdi-card-text-outline"></i>
@@ -197,6 +198,9 @@
               </ul>
             </div>
           </li>
+          @endif
+
+          @if (Auth::user()->role === 'admin')
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
               <i class="menu-icon mdi mdi-layers-outline"></i>
@@ -209,8 +213,9 @@
               </ul>
             </div>
           </li>
+          @endif
     
-          
+          @if (Auth::user()->role === 'admin' OR Auth::user()->role === 'user')
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="menu-icon mdi mdi-table"></i>
@@ -223,6 +228,8 @@
               </ul>
             </div>
           </li>
+          @endif
+
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="menu-icon mdi mdi-account-outline"></i>
@@ -232,6 +239,19 @@
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="{{ url('/etudiants')}}">Etudiants</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="menu-icon mdi mdi-account-outline"></i>
+              <span class="menu-title">Suivies</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{ url('/suivies')}}">Suivies</a></li>
               </ul>
             </div>
           </li>
