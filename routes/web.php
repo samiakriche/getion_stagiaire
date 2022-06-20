@@ -102,3 +102,8 @@ Route::resource('etudiants', App\Http\Controllers\EtudiantController::class);
  * Suivies Routes
  */
 Route::resource('suivies', App\Http\Controllers\SuivieController::class);
+
+/*
+ * Messages Routes
+ */
+Route::resource('messages', App\Http\Controllers\MessageController::class);

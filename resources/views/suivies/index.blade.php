@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="mb-3">
- @if (Auth::user()->role === 'encadrant' )
+ @if (Auth::user()->role === 'encadrant')
     <div class="float-right">
         @can('create', new App\Models\Suivie)
             <a href="{{ route('suivies.create') }}" class="btn btn-success">{{ __('suivie.create') }}</a>
