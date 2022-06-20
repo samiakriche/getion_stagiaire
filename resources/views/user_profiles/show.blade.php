@@ -23,7 +23,8 @@
             <div class="col-md-12 offset-1">
                
                <a href="{{ route('user_profile.edit', $userProfile->id) }}" id="edit-user_profile-{{ $userProfile->id }}" class="btn btn-info">Modifier mes informations</a>
-              
+               <a class="btn btn-primary" href="{{ route('user_profile.generate-pdf', $userProfile->id) }}" id="generate-pdf-user_profile-{{ $userProfile->id }}"> Export to PDF </a>
+
                
             </div>
         </div>

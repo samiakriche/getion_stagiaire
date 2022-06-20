@@ -7,17 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Gestion des stagaires </title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="./vendors/feather/feather.css">
-  <link rel="stylesheet" href="./vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="./vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="./vendors/typicons/typicons.css">
-  <link rel="stylesheet" href="./vendors/simple-line-icons/css/simple-line-icons.css">
-  <link rel="stylesheet" href="./vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="./css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/islaib.gif" />
 </head>
@@ -34,10 +34,10 @@
         </div>
         <div>
           <a class="navbar-brand brand-logo" href="{{ url('/admin/dashboard')}}">
-            <img src="./images/islaib.gif" alt="logo" />
+            <img src="../../images/islaib.gif" alt="logo" />
           </a>
           <a class="navbar-brand brand-logo-mini" href="{{ url('/admin/dashboard')}}">
-            <img src="./images/islaib.gif" alt="logo" />
+            <img src="../../images/islaib.gif" alt="logo" />
           </a>
         </div>
       </div>
@@ -91,10 +91,10 @@
           </li>
           <li class="nav-item dropdown d-none d-lg-block user-dropdown">
             <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="img-xs rounded-circle" src="./images/faces/face8.jpg" alt="Profile image"> </a>
+              <img class="img-xs rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image"> </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
               <div class="dropdown-header text-center">
-                <img class="img-md rounded-circle" src="./images/faces/face8.jpg" alt="Profile image">
+                <img class="img-md rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image">
                 <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
                 <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
               </div>
@@ -243,7 +243,7 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="./pages/samples/login.html"> Messages reçu</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Messages reçu</a></li>
               </ul>
             </div>
           </li>
@@ -271,17 +271,17 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
-  <script src="./vendors/js/vendor.bundle.base.js"></script>
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
-  <script src="./vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="../../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
   <!-- End plugin js for this page -->
   <!-- inject:js -->
-  <script src="./js/off-canvas.js"></script>
-  <script src="./js/hoverable-collapse.js"></script>
-  <script src="./js/template.js"></script>
-  <script src="./js/settings.js"></script>
-  <script src="./js/todolist.js"></script>
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->

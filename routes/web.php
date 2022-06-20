@@ -44,10 +44,11 @@ Route::post('demande_stages_encadrant/{id}', [App\Http\Controllers\DemandeStageC
 Route::get('document_download/{id}', [App\Http\Controllers\DocumentController::class, 'download'])->name('documents.download');
 Route::get('user_profile/show', [App\Http\Controllers\UserProfileController::class, 'show'])->name('user_profile.show');
 Route::get('user_profile/edit/{id}', [App\Http\Controllers\UserProfileController::class, 'edit'])->name('user_profile.edit');
+Route::get('user_profile/generate-pdf/{id}', [App\Http\Controllers\UserProfileController::class, 'generatePDF'])->name('user_profile.generate-pdf');
 
 
-
-
+use App\Http\Controllers\NiveauController;
+Route::resource('niveaux', NiveauController::class);
 
 
 
@@ -107,3 +108,6 @@ Route::resource('suivies', App\Http\Controllers\SuivieController::class);
  * Messages Routes
  */
 Route::resource('messages', App\Http\Controllers\MessageController::class);
+Route::resource('generate-pdf', App\Http\Controllers\PDFController::class);
+Route::get('/generate-pdf', [App\Http\Controllers\PDFController::class, 'generatePDF'])->name('generate-pdf');
+
